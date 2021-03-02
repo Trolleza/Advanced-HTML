@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video (CONTROL)!</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;}
+
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(./Images/10_FEB_5.jpg);
+            background-size: contain;}
+
+        h1{
+            color: rgb(212, 202, 57);
+            background-color: aliceblue;
+            text-align: center;
+            text-shadow: 2px 2px 5px yellow;}
+
+        p{
+            position: relative;
+            text-align: center;}
+        
+        a{
+            text-decoration: none;
+            color: black;}
+
+        video{width: 100%;}
+        
+        .video-container{
+            position: relative;
+            width: 960px;
+            height: 540px;}
+
+        .controls-container{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;}
+
+        .controls-row{
+            width: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: translateY(59%);}
+
+        .control-btn{
+            margin-right: 6px;
+            width: 40px;
+            transition: all 0.2s;
+            padding: 3px;
+            border-radius: 2rem;
+            background-color: rgb(255, 255, 255);}
+
+        .control-btn:hover{
+            cursor: pointer;
+            width: 60px;
+            background-color: yellow;}
+
+        #main-btn{
+            height: 60px;
+            width: 60px;}
+    </style>
+</head>
+
+<body>
+    <div class="video-container">
+        <h1>LP - The One That You Love</h1>
+        <video id="video" src="./Video/The_One.mp4"></video>
+
+        <div class="controls-container"
+            onmouseenter="displayControllers()"
+            onmouseleave="hideControllers()">
+
+            <div class="controls-row">
+                <img 
+                    class="control-btn" 
+                    src="./Images/Back.png"
+                    title="Retroceder"
+                    onclick="rewind()"/>
+
+                <img
+                     class="control-btn" 
+                     src="./Images/Foward.png"
+                     title="Avançar"
+                     onclick="forward()"/>
+
+                <img 
+                    class="control-btn"
+                    src="./Images/Decrease.png"
+                    title="Diminuir Velocidade" 
+                    onclick="speedDown()"/>
+                
+                <img 
+                    id="main-btn"
+                    class="control-btn"
+                    src="./Images/Play.png"
+                    title="Reproduzir"/>
+                
+                <img
+                    class="control-btn"
+                    src="./Images/Increase.png"
+                    title="Aumentar Velocidade" 
+                    onclick="speedUp()"/>
+                
+                <img 
+                    class="control-btn"
+                    src="./Images/Stop.png"
+                    title="Parar"
+                    onclick="stopVideo()"/>
+                
+                <img 
+                    id="fullscreen"
+                    class="control-btn"
+                    src="./Images/Fullscreen.png"
+                    title="Maximizar"/>
+            </div>
+        </div>
+        <div class="credits">
+            <p><a href="https://br.freepik.com/vetores/fundo">
+                Fundo vetor criado por freepik - br.freepik.com</a></p>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
