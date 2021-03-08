@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Player!</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Johnny Cash - Hurt</h1>
+
+        <div class="control">
+            <div class="controls-row">
+                <img class="btn" onclick="stop()" title="Stop" src="./Images/Stop.png">
+                <img class="btn" onclick="rewind()" title="Rewind" src="./Images/Rewind.png">
+                <img class="btn" onclick="volume1()" title="Volume +" src="./Images/Volume+.png">
+                <img id="main-btn" class="btn" onclick="play()" title="Play/Pause" src="./Images/Play.png">
+                <img class="btn" onclick="volume2()" title="Volume -" src="./Images/Volume-.png">
+                <img class="btn" onclick="forward()" title="Fast Foward" src="./Images/FastForward.png">
+                <img id="muteUnmute" class="btn" onclick="mute()" title="Mute/Unmute" src="./Images/Mute.png">
+            </div>
+            <div>
+                <input type="range" id="rangeProgress" value="0" min="0">
+                <span id="time">00:00:00</span>
+            </div>
+        </div>
+
+        <div>
+            <img class="planets" src="./GIF/Planets.gif">
+            <audio id="hurt">
+                <source src="./Audio/Johnny Cash - Hurt.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="credits">
+            <p>Graziele Dantas Silveira</p>
+            <a href="https://github.com/Trolleza">Github</a>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
+
